@@ -1,0 +1,287 @@
+/* General styles */
+:root {
+  --font-primary: "Comic Sans MS", cursive; /* Font utama */
+  --font-secondary: "Caveat", cursive; /* Font sekunder */
+  --color-primary: tomato; /* Warna utama */
+  --color-secondary: #ff6347; /* Warna sekunder */
+  --box-width-left: 40%; /* Lebar kotak kiri */
+  --box-width-right: 60%; /* Lebar kotak kanan */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: var(--font-primary); /* Menggunakan variabel untuk font */
+}
+
+/* Container for centering content horizontally and vertically */
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Boxes */
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-left {
+  background-color: #f5f5f5;
+  width: var(--box-width-left); /* Menggunakan variabel untuk lebar */
+}
+
+.box-right {
+  background-color: #ffffff;
+  width: var(--box-width-right); /* Menggunakan variabel untuk lebar */
+}
+
+/* Navbar Style */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Mengatur z-index agar navbar berada di atas konten */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Mengurangi padding atas dan bawah */
+  background-color: var(--color-primary); /* Menggunakan variabel untuk warna */
+}
+
+.navbar-brand {
+  font-family: var(--font-secondary); /* Menggunakan variabel untuk font */
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+/* Navbar Style */
+.nav-link {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px; /* Menambahkan padding untuk ruang di sekitar teks */
+  border-radius: 4px; /* Menambahkan border-radius untuk tampilan lebih halus */
+  transition: background-color 0.3s ease; /* Menambahkan transisi warna latar belakang */
+}
+
+.nav-link:hover {
+  background-color: var(
+    --color-secondary
+  ); /* Menggunakan variabel untuk warna */
+}
+
+.nav-link:active {
+  transform: scale(0.95); /* Mengubah skala tombol saat ditekan */
+}
+
+.nav-button {
+  background-color: white;
+  color: var(--color-primary); /* Menggunakan variabel untuk warna */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Hero Style */
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary); /* Menggunakan variabel untuk warna */
+  margin-bottom: 1.5rem;
+}
+
+/* Info group */
+.info-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  flex: 1 1 30%; /* Distribute equally with a maximum width of 30% */
+  margin-right: 2%;
+  margin-bottom: 1rem;
+}
+
+.info-label {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary); /* Menggunakan variabel untuk warna */
+}
+
+/* Description */
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Read more button */
+.read-more {
+  background-color: var(--color-primary); /* Menggunakan variabel untuk warna */
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Menambahkan transisi untuk background color dan transform */
+}
+
+.read-more:hover {
+  background-color: var(
+    --color-secondary
+  ); /* Menggunakan variabel untuk warna */
+  transform: scale(1.05); /* Mengubah skala tombol pada hover */
+}
+
+.read-more:active {
+  transform: scale(0.95); /* Mengubah skala tombol saat ditekan */
+}
+
+/* Destination Section */
+.destination-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Mengatur dua kolom dengan lebar yang sama */
+  gap: 20px; /* Jarak antara kolom */
+  margin-top: 50px; /* Ruang atas section */
+}
+
+.destination-description {
+  padding: 20px;
+  background-color: #fff; /* Warna latar belakang untuk kolom deskripsi */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-description .section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333; /* Warna teks judul */
+}
+
+.destination-item h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333; /* Warna teks judul tempat wisata */
+}
+
+.destination-item figure {
+  margin: 0; /* Reset margin */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.destination-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.destination-item figcaption a {
+  font-size: 16px;
+  color: #007bff; /* Warna link */
+  text-decoration: none; /* Hapus garis bawah */
+}
+
+.destination-item figcaption a:hover {
+  text-decoration: underline; /* Garis bawah pada hover */
+}
+
+.slideshow {
+  margin-top: 350px; /* Ruang atas slideshow */
+  position: relative;
+  max-width: auto;
+  max-height: 100%; /* Menentukan tinggi maksimum slideshow */
+  overflow: hidden;
+}
+
+.slideshow .slide {
+  display: none;
+}
+
+.slideshow .slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.slideshow .caption {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin: 0 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
